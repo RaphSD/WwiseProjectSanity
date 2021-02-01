@@ -20,7 +20,7 @@ try:
             csv_result.append(["FILE > MAXDURATIONUNSTREAMED AND UNSTREAMED:"])
             csv_result.append([" "])
 
-        #Core Query
+            #Core Query
             object_get_args = {
                 "from": {
                     "ofType": ["Sound"]
@@ -30,7 +30,7 @@ try:
                 }
             }
             result = client.call("ak.wwise.core.object.get", object_get_args)
-        #Data managing and checking
+            #Data managing and checking
 
             maxDurationUnstreamed = 8
             
@@ -62,7 +62,7 @@ try:
             csv_result.append(["MUSIC FILE > MAXDURATIONUNSTREAMED AND UNSTREAMED:"])
             csv_result.append([" "])
 
-        #Core Query
+            #Core Query
             object_get_args = {
                 "from": {
                     "ofType": ["MusicTrack"]
@@ -72,7 +72,7 @@ try:
                 }
             }
             result = client.call("ak.wwise.core.object.get", object_get_args)
-        #Data managing and checking
+            #Data managing and checking
 
             maxDurationUnstreamed = 8
             
@@ -103,7 +103,7 @@ try:
             csv_result.append(["ONE SHOT SOUNDS WITH VVB NOT KILL:"])
             csv_result.append([" "])
 
-        #Core Query
+            #Core Query
             object_get_args = {
                 "from": {
                     "ofType": ["Sound"]
@@ -113,7 +113,7 @@ try:
                 }
             }
             result = client.call("ak.wwise.core.object.get", object_get_args)
-        #Data managing and checking
+            #Data managing and checking
 
             #remove 1 level of dictionary for simpler syntax
             result = (result['return'])
@@ -145,7 +145,7 @@ try:
             csv_result.append([" "])
             csv_result.append(["POSITIVE VOICE VOLUME:"])
             csv_result.append([" "])
-        #Core Query
+            #Core Query
             object_get_args = {
                 "from": {
                     "ofType": ["Sound"]
@@ -155,7 +155,7 @@ try:
                 }
             }
             result = client.call("ak.wwise.core.object.get", object_get_args)
-        #Data managing and checking
+            #Data managing and checking
 
             maxPositiveVoiceVolume = 3
 
@@ -194,7 +194,7 @@ try:
 
             }
             result = client.call("ak.wwise.core.object.get", object_get_args)
-        #Data managing and checking
+            #Data managing and checking
 
 
             #remove 1 level of dictionary for simpler syntax
@@ -231,7 +231,7 @@ try:
 
             }
             result = client.call("ak.wwise.core.object.get", object_get_args)
-        #Data managing and checking
+            #Data managing and checking
 
 
             #remove 1 level of dictionary for simpler syntax
@@ -257,7 +257,7 @@ try:
             csv_result.append([" "])
             csv_result.append(["MASTER AUDIO BUS ROUTED SOUND:"])
             csv_result.append([" "])
-        #Core Query
+            #Core Query
             object_get_args = {
                 "from": {
                     "ofType": ["Sound"]
@@ -267,7 +267,7 @@ try:
                 }
             }
             result = client.call("ak.wwise.core.object.get", object_get_args)
-        #Data managing and checking
+            #Data managing and checking
 
             
 
@@ -295,7 +295,7 @@ try:
             csv_result.append([" "])
             csv_result.append(["MASTER AUDIO BUS ROUTED MUSIC:"])
             csv_result.append([" "])
-        #Core Query
+            #Core Query
             object_get_args = {
                 "from": {
                     "ofType": ["MusicTrack"]
@@ -305,9 +305,7 @@ try:
                 }
             }
             result = client.call("ak.wwise.core.object.get", object_get_args)
-        #Data managing and checking
-
-            
+            #Data managing and checking
 
             #remove 1 level of dictionary for simpler syntax
             result = (result['return'])
