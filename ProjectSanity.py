@@ -248,6 +248,80 @@ try:
                 iterator+=1
             print("\n")
 
+        def masterAudioBusRouted():
+
+            print("Master audio bus routed sounds:", "\n")
+            
+            #formatting rows in CSV
+            csv_result.append([" "])
+            csv_result.append(["MASTER AUDIO BUS ROUTED SOUND:"])
+            csv_result.append([" "])
+        #Core Query
+            object_get_args = {
+                "from": {
+                    "ofType": ["Sound"]
+                },
+                "options": {
+                    "return": ["name", "@OutputBus"]
+                }
+            }
+            result = client.call("ak.wwise.core.object.get", object_get_args)
+        #Data managing and checking
+
+            
+
+            #remove 1 level of dictionary for simpler syntax
+            result = (result['return'])
+            
+            #loop every file unstreamed with voice volume > maxPositiveVoiceVolume
+            iterator = 0
+            for i in (result):
+            
+                if(result[iterator]["@OutputBus"]["name"]) == "Master Audio Bus" :
+                    print(result[iterator]["name"], "is routed to the master audio bus")
+                    csv_result.append([result[iterator]["name"], "is routed to the master audio bus"])
+                    
+            
+                iterator+=1
+            print("\n")
+
+        def masterAudioBusRoutedMusic():
+
+            print("Master audio bus routed music:", "\n")
+            
+            #formatting rows in CSV
+            csv_result.append([" "])
+            csv_result.append(["MASTER AUDIO BUS ROUTED MUSIC:"])
+            csv_result.append([" "])
+        #Core Query
+            object_get_args = {
+                "from": {
+                    "ofType": ["MusicTrack"]
+                },
+                "options": {
+                    "return": ["name", "@OutputBus"]
+                }
+            }
+            result = client.call("ak.wwise.core.object.get", object_get_args)
+        #Data managing and checking
+
+            
+
+            #remove 1 level of dictionary for simpler syntax
+            result = (result['return'])
+            
+            #loop every file unstreamed with voice volume > maxPositiveVoiceVolume
+            iterator = 0
+            for i in (result):
+            
+                if(result[iterator]["@OutputBus"]["name"]) == "Master Audio Bus" :
+                    print(result[iterator]["name"], "is routed to the master audio bus")
+                    csv_result.append([result[iterator]["name"], "is routed to the master audio bus"])
+                    
+            
+                iterator+=1
+            print("\n")
+
 #----------------------------WRITING INTO CSV FILE--------------------------------------------
         def csvWriting():
             print ("-------------Writing results to CSV------------------")
@@ -263,6 +337,8 @@ try:
         positiveVoiceVolume()
         unreferencedFiles()
         unreferencedFilesMusic()
+        masterAudioBusRouted()
+        masterAudioBusRoutedMusic()
         csvWriting()
 
 
