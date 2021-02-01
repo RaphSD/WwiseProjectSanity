@@ -200,7 +200,7 @@ try:
             #remove 1 level of dictionary for simpler syntax
             result = (result['return'])
             
-            #loop every file unstreamed with voice volume > maxPositiveVoiceVolume
+            #loop every file Inclusion
             iterator = 0
             for i in (result):
                 if(result[iterator]["@Inclusion"]) == False:
@@ -237,7 +237,7 @@ try:
             #remove 1 level of dictionary for simpler syntax
             result = (result['return'])
             
-            #loop every file unstreamed with voice volume > maxPositiveVoiceVolume
+            #loop every file Inclusion
             iterator = 0
             for i in (result):
                 if(result[iterator]["@Inclusion"]) == False:
@@ -248,6 +248,7 @@ try:
                 iterator+=1
             print("\n")
 
+#----------------------------MASTER AUDIO BUS ROUTED SFX-----------------------------------------------
         def masterAudioBusRouted():
 
             print("Master audio bus routed sounds:", "\n")
@@ -273,7 +274,7 @@ try:
             #remove 1 level of dictionary for simpler syntax
             result = (result['return'])
             
-            #loop every file unstreamed with voice volume > maxPositiveVoiceVolume
+            #loop every file outpus bus being master audio bus
             iterator = 0
             for i in (result):
             
@@ -285,6 +286,7 @@ try:
                 iterator+=1
             print("\n")
 
+#----------------------------MASTER AUDIO BUS ROUTED MUSIC-----------------------------------------------
         def masterAudioBusRoutedMusic():
 
             print("Master audio bus routed music:", "\n")
@@ -310,7 +312,7 @@ try:
             #remove 1 level of dictionary for simpler syntax
             result = (result['return'])
             
-            #loop every file unstreamed with voice volume > maxPositiveVoiceVolume
+            #loop every file outpus bus being master audio bus
             iterator = 0
             for i in (result):
             
